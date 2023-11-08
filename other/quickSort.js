@@ -8,10 +8,10 @@ function quickSort(arr) {
   const right = [];
 
   for (let i = 1; i < arr.length; i++) {
-    arr[i] < pivot ? left.push(arr[i]) : right.push(arr[i]); // Same numbers will be pushed to the right array
+    arr[i] < pivot ? left.push(arr[i]) : right.push(arr[i]); // Equal numbers to arr[0] will be pushed to the right array
   }
 
-  return [...quickSort(left), pivot, ...quickSort(right)];
+  return [...quickSort(left), pivot, ...quickSort(right)]; // recursively call the function for left/right arrays
 }
 
 console.log(quickSort(array));
